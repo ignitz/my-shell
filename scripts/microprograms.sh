@@ -7,7 +7,7 @@
 MY_WIFI_INTERFACE=wlp2s0
 
 # Check if wifi is connected
-check_internet {
+function check_internet {
 	echo 'Checking internet connection'
 	sleep 1
 	while true; do
@@ -18,19 +18,18 @@ check_internet {
 }
 
 # Check google.com
-pingar {
+function pingar {
 	ping www.google.com.br
 }
 
 # get permissions from file in octal
-getchmod {
+function get_chmod {
 	stat --format '%a' "$1"
 }
 
-
 # Restart USB services.
 # Somehow the USB 3.0 doesn't work with 2TB Hitachi 3.0
-restart_usb {
+function restart_usb {
 	echo 'restarting usb service'
 	sudo modprobe -r usbhid && sleep 5 && sudo modprobe usbhid
 	sudo modprobe -r usb-storage
@@ -38,17 +37,36 @@ restart_usb {
 }
 
 # get power from battery
-getpower {
+function get_power {
 	upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"
 }
 
 # get power draining from battery
 # BAT1 is for Lenovo S400u on ElementaryOS 0.4 Loki
 # If doesn't work, try with 'BAT0'
-getpowerdraw {
+function get_power_draw {
 	while true; do
 		awk '{printf $1*10^-6 " W\r"}' /sys/class/power_supply/BAT1/power_now
 		sleep 1
 	done
 }
 
+# get pid
+function get_pid {
+	return $(ps -p $$ -o ppid=)
+}
+
+# get terminal name
+function get_terminal_name {
+	echo $(ps -p $(ps -p $$ -o ppid=) o args=)
+}
+
+# redirect port of SSH on my Victara Android
+function port_foward {
+	adb forward tcp:8022 tcp:8022
+}
+
+# connect with ssh in my Android device
+function victara {
+	ssh  -p 8022 -i ~/Documents/id_rsa
+}

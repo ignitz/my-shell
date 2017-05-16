@@ -9,8 +9,9 @@ alias unzip="7z x"
 # Clear screen, not like 'clear'
 alias clear_buf="printf '\033c'"
 
-# connect with ssh in my Android device
-alias victara="ssh $1 -p 8022 -i ~/Documents/id_rsa"
+# connect to my website
+alias conectar="ssh niitsuma@niitsuma.com.br"
+
 # connect with ssh on my virtual OS
 alias mininet="ssh mininet@192.168.56.102 -p 2222"
 
@@ -25,8 +26,10 @@ alias icv="cd ~/src/ufmg/2017_1_dcc030_icv"
 alias let200="cd ~/src/ufmg/2017_1_let200"
 alias spc="cd /home/yuri/src/ufmg/spc/solutions"
 
+alias playg="cd ~/src/playground"
+
 # Get the codes of courses in this semester
-alias get="cat ~/src/ufmg/name.txt"
+alias get_names="cat ~/src/ufmg/name.txt"
 
 # Get microprograms in bash
 if [ -f ~/scripts/microprograms.sh ]; then
