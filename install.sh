@@ -1,4 +1,4 @@
-if [ ! -d ~/scripts ]; then
+if [ -d ~/scripts ]; then
   rm -rf ~/scripts
 fi
 
