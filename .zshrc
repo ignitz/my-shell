@@ -93,10 +93,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f ~/scripts/bash_aliases ]; then
-    . ~/scripts/bash_aliases
+if [ -f ~/scripts/bash_aliases.sh ]; then
+    . ~/scripts/bash_aliases.sh
 fi
 
-if [ -f ~/scripts/importrc ]; then
-    . ~/scripts/importrc
+if [ -f ~/scripts/importrc.sh ]; then
+    . ~/scripts/importrc.sh
 fi
