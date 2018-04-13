@@ -7,7 +7,14 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="cobalt2"
+ZSH_THEME="agnoster"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +58,9 @@ ZSH_THEME="cobalt2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,10 +93,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# List of aliases by Yuri Niitsuma <ignitzhjfk@gmail.com>
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/scripts/bash_aliases ]; then
+    . ~/scripts/bash_aliases
 fi
 
-# added by Anaconda2 4.3.1 installer
-export PATH="/home/yuri/anaconda2/bin:$PATH"
+if [ -f ~/scripts/importrc ]; then
+    . ~/scripts/importrc
+fi

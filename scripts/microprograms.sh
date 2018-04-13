@@ -68,5 +68,5 @@ function port_foward {
 
 # connect with ssh in my Android device
 function victara {
-	ssh  -p 8022 -i ~/Documents/id_rsa
+	ssh -p 8022 -i ~/Documents/id_rsa
 }
