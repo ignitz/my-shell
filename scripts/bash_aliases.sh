@@ -8,6 +8,7 @@ alias unzip="7z x"
 
 # Clear screen, not like 'clear'
 alias clear_buf="printf '\033c'"
+alias clearbuf="printf '\033c'"
 
 # connect with ssh on my virtual OS
 alias mininet="ssh mininet@192.168.56.102 -p 2222"
