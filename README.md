@@ -19,3 +19,11 @@ Example:
 ```
 $ gsettings set org.pantheon.terminal.settings font 'Droid Sans Mono for Powerline 10'
 ```
+
+### Login Bug after some updates
+
+Login slow for 1-2 minutes... seems like probability race condition.
+Disable accessibility
+```
+$ sudo mv /etc/xdg/autostart/at-spi-dbus-bus.desktop /etc/xdg/autostart/at-spi-dbus-bus.disable
+```
