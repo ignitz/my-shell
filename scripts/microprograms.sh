@@ -27,7 +27,7 @@ function get_chmod {
 	stat --format '%a' "$1"
 }
 
-# Restart USB services.
+# Restart USB services (legacy issue from Lenovo S400u).
 # Somehow the USB 3.0 doesn't work with 2TB Hitachi 3.0
 function restart_usb {
 	echo 'restarting usb service'
@@ -46,7 +46,7 @@ function get_power {
 # If doesn't work, try with 'BAT0'
 function get_power_draw {
 	while true; do
-		awk '{printf $1*10^-6 " W\r"}' /sys/class/power_supply/BAT1/power_now
+		awk '{printf $1*10^-6 " W\r"}' /sys/class/power_supply/BAT0/power_now
 		sleep 1
 	done
 }
@@ -61,7 +61,7 @@ function get_terminal_name {
 	echo $(ps -p $(ps -p $$ -o ppid=) o args=)
 }
 
-# redirect port of SSH on my Victara Android
+# redirect port of SSH on my Victara Android using ADB
 function port_foward {
 	adb forward tcp:8022 tcp:8022
 }

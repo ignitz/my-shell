@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/yuri/.oh-my-zsh
+  export ZSH="/home/yuri/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -90,11 +90,11 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
 
-if [ -f ~/scripts/bash_aliases.sh ]; then
-    . ~/scripts/bash_aliases.sh
+if [ -f ~/scripts/myaliases.sh ]; then
+    . ~/scripts/myaliases.sh
 fi
 
 if [ -f ~/scripts/importrc.sh ]; then
