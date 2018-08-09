@@ -70,3 +70,8 @@ function port_foward {
 function victara {
 	ssh -p 8022 -i ~/Documents/id_rsa
 }
+
+# show CPU freq every second
+function checkcpu {
+    watch -n1 "lscpu | grep 'MHz' | awk '{print (}'""')}'"
+}

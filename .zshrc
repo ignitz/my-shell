@@ -93,6 +93,14 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
+if [ -f ~/scripts/define.sh ]; then
+    . ~/scripts/define.sh
+fi
+
+if [ -f ~/scripts/i3aliases.sh ]; then
+    . ~/scripts/i3aliases.sh
+fi
+
 if [ -f ~/scripts/myaliases.sh ]; then
     . ~/scripts/myaliases.sh
 fi
@@ -100,3 +108,4 @@ fi
 if [ -f ~/scripts/importrc.sh ]; then
     . ~/scripts/importrc.sh
 fi
+

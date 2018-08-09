@@ -32,3 +32,5 @@ export PATH=$PATH:$HOME/App/android-studio/bin
 # Need for Compilers course from Stanford
 # export PATH=/usr/class/cs143/bin:$PATH
 
+# Personal PATH
+export PATH=$PATH:$HOME/App/bin
