@@ -9,10 +9,8 @@ Need:
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [Powerline fonts](https://github.com/powerline/fonts)
 - [Cobalt2 theme](https://github.com/wesbos/Cobalt2-iterm)
-
-### Know issue in elementary OS
-
-You need to set Powerline fonts.
+- [libinputgesture](https://neal.codes/blog/adding-mac-like-touch-gestures-to-elementary-os)
+    add auto-start libinput-gestur
 
 Example:
 
